@@ -6212,7 +6212,8 @@ public class SubHandler7 {
                     // invoke native method
                     Void __result__ = null;
                     try {
-                        com.amap.api.maps.MapsInitializer.loadWorldGridMap(var0);
+                        com.amap.api.maps.MapsInitializer.loadWorldVectorMap(var0);
+//                        com.amap.api.maps.MapsInitializer.loadWorldGridMap(var0);
                     } catch (Throwable throwable) {
                         throwable.printStackTrace();
                         if (getEnableLog()) {

@@ -63,5 +63,7 @@ dependencies {
     // flutter plugin dependency
     
     // sdk dependency
-    api 'com.amap.api:location:6.1.0'
+//    api 'com.amap.api:location:6.4.0'
+    api 'com.amap.api:3dmap:9.8.2'
+//    api 'com.amap.api:location:6.1.0'
 }

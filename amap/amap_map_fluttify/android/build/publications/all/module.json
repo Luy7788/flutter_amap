@@ -35,7 +35,7 @@
           "group": "com.amap.api",
           "module": "3dmap",
           "version": {
-            "requires": "9.2.1"
+            "requires": "9.8.2"
           }
         }
       ],
@@ -121,7 +121,7 @@
           "group": "com.amap.api",
           "module": "3dmap",
           "version": {
-            "requires": "9.2.1"
+            "requires": "9.8.2"
           }
         }
       ],
@@ -158,7 +158,7 @@
           "group": "com.amap.api",
           "module": "3dmap",
           "version": {
-            "requires": "9.2.1"
+            "requires": "9.8.2"
           }
         }
       ],
@@ -244,7 +244,7 @@
           "group": "com.amap.api",
           "module": "3dmap",
           "version": {
-            "requires": "9.2.1"
+            "requires": "9.8.2"
           }
         }
       ],
@@ -281,7 +281,7 @@
           "group": "com.amap.api",
           "module": "3dmap",
           "version": {
-            "requires": "9.2.1"
+            "requires": "9.8.2"
           }
         }
       ],
@@ -367,7 +367,7 @@
           "group": "com.amap.api",
           "module": "3dmap",
           "version": {
-            "requires": "9.2.1"
+            "requires": "9.8.2"
           }
         }
       ],

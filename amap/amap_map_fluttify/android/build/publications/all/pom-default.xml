@@ -22,7 +22,7 @@
     <dependency>
       <groupId>com.amap.api</groupId>
       <artifactId>3dmap</artifactId>
-      <version>9.2.1</version>
+      <version>9.8.2</version>
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>

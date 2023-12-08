@@ -4,29 +4,16 @@
 
 package me.yohom.amap_map_fluttify.sub_handler;
 
-import android.os.Bundle;
-import android.util.Log;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import androidx.annotation.NonNull;
-import io.flutter.embedding.engine.plugins.FlutterPlugin;
-import io.flutter.plugin.common.BinaryMessenger;
-import io.flutter.plugin.common.MethodCall;
-import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
-import io.flutter.plugin.common.StandardMethodCodec;
-import io.flutter.plugin.platform.PlatformViewRegistry;
-
-import me.yohom.amap_map_fluttify.AmapMapFluttifyPlugin.Handler;
-import me.yohom.foundation_fluttify.core.FluttifyMessageCodec;
-
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getEnableLog;
 import static me.yohom.foundation_fluttify.FoundationFluttifyPluginKt.getHEAP;
+
+import android.util.Log;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import io.flutter.plugin.common.BinaryMessenger;
+import me.yohom.amap_map_fluttify.AmapMapFluttifyPlugin.Handler;
 
 @SuppressWarnings("ALL")
 public class SubHandler1 {
@@ -2586,7 +2573,8 @@ public class SubHandler1 {
                 // invoke native method
                 Void __result__ = null;
                 try {
-                    com.amap.api.maps.MapsInitializer.loadWorldGridMap(var0);
+                    com.amap.api.maps.MapsInitializer.loadWorldVectorMap(var0);
+//                    com.amap.api.maps.MapsInitializer.loadWorldGridMap(var0);
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
                     if (getEnableLog()) {
