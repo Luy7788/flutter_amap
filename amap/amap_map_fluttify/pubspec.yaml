@@ -11,30 +11,35 @@ dependencies:
     sdk: flutter
   
   uni_map_platform_interface:
-    git:
-      url: https://github.com/banyungong/flutter_amap.git
-      path: amap/uni_map_platform_interface
+    path: ../uni_map_platform_interface
+    # git:
+    #   url: https://github.com/banyungong/flutter_amap.git
+    #   path: amap/uni_map_platform_interface
   url_launcher: ^6.1.6
   foundation_fluttify:
-    git:
-      url: https://github.com/banyungong/flutter_amap.git
-      path: amap/foundation_fluttify
+    path: ../foundation_fluttify
+    # git:
+    #   url: https://github.com/banyungong/flutter_amap.git
+    #   path: amap/foundation_fluttify
   core_location_fluttify:
-    git:
-      url: https://github.com/banyungong/flutter_amap.git
-      path: amap/core_location_fluttify
+    path: ../core_location_fluttify
+    # git:
+    #   url: https://github.com/banyungong/flutter_amap.git
+    #   path: amap/core_location_fluttify
   amap_core_fluttify:
-    git:
-      url: https://github.com/banyungong/flutter_amap.git
-      path: amap/amap_core_fluttify
+    path: ../amap_core_fluttify
+    # git:
+    #   url: https://github.com/banyungong/flutter_amap.git
+    #   path: amap/amap_core_fluttify
 #  amap_search_fluttify:
 #    git:
 #      url: https://github.com/banyungong/flutter_amap.git
 #      path: amap/amap_search_fluttify
   amap_location_fluttify:
-    git:
-      url: https://github.com/banyungong/flutter_amap.git
-      path: amap/amap_location_fluttify
+    path: ../amap_location_fluttify
+    # git:
+    #   url: https://github.com/banyungong/flutter_amap.git
+    #   path: amap/amap_location_fluttify
 
 dev_dependencies:
   flutter_test:
