@@ -4328,6 +4328,16 @@ extern BOOL enableLog;
         
             ref.image = image;
             methodResult(@"success");
+            
+            NSMutableArray *tempArr = [NSMutableArray array];
+            for (NSString *key in HEAP) {
+                
+                if ([key containsString:@"NSConcreteValue"]) {
+                    [tempArr addObject:key];
+                }
+            }
+          
+            [HEAP removeObjectsForKeys:tempArr];
         },
         
         @"MAAnnotationView::set_customCalloutView": ^(NSObject <FlutterPluginRegistrar> * registrar, id args, FlutterResult methodResult) {

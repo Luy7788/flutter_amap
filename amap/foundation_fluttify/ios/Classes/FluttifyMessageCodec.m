@@ -127,15 +127,61 @@ UInt8 elementSizeForFlutterStandardDataType(FlutterStandardDataType type) {
     // 传递NSObject类型
   else if ([value isKindOfClass:[NSObject class]]) {
     NSUInteger hash = [value hash];
-    NSString* refId = [NSString stringWithFormat:@"%@:%@", NSStringFromClass([value class]), @(hash)];
+    NSString* className = NSStringFromClass([value class]);
+    NSString* refId = [NSString stringWithFormat:@"%@:%@", className, @(hash)];
     [self writeByte:FluttifyFieldRef];
     [self writeUTF8:refId];
     HEAP[refId] = value;
+      
+      ///image
+      if ([className isEqualToString:@"UIImage"] ) {
+          [self removeHEAPWithClassName:@"UIImage" refId:refId];
+      }
+      
+      ///CLLocation
+      if ([className isEqualToString:@"CLLocation"] ) {
+          [self removeHEAPWithClassName:@"CLLocation" refId:refId];
+      }
+      
+      ///MAMapStatus
+      if ([className isEqualToString:@"MAMapStatus"] ) {
+          [self removeHEAPWithClassName:@"MAMapStatus" refId:refId];
+      }
+      
+      ///AMapLocationManager
+      if ([className isEqualToString:@"AMapLocationManager"] ) {
+          [self removeHEAPWithClassName:@"AMapLocationManager" refId:refId];
+      }
+      
+      ///AMapLocationReGeocode
+      if ([className isEqualToString:@"AMapLocationReGeocode"] ) {
+          [self removeHEAPWithClassName:@"AMapLocationReGeocode" refId:refId];
+      }
+      
+      ///MAAnnotationView
+      if ([className isEqualToString:@"MAAnnotationView"] ) {
+          [self removeHEAPWithClassName:@"MAAnnotationView" refId:refId];
+      }
+      
   } else {
     NSLog(@"Unsupported value: %@ of type %@", value, [value class]);
     NSAssert(NO, @"Unsupported value for standard codec");
   }
 }
+
+- (void)removeHEAPWithClassName:(NSString *)ClasssName refId:(NSString *)refId {
+    NSMutableArray *tempArr = [NSMutableArray array];
+    for (NSString *key in HEAP) {
+        if (key == refId) continue;
+        
+        if ([key containsString:ClasssName]) {
+            [tempArr addObject:key];
+        }
+    }
+  
+    [HEAP removeObjectsForKeys:tempArr];
+}
+
 @end
 
 @implementation FluttifyReader
