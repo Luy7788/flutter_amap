@@ -157,6 +157,7 @@ class Marker implements IMarker {
         final icon = await com_amap_api_maps_model_BitmapDescriptorFactory
             .fromBitmap(bitmap);
         await androidModel!.setIcon(icon!);
+        await bitmap.recycle();
       },
       ios: (pool) async {
         final icon = await UIImage.create(iconData);

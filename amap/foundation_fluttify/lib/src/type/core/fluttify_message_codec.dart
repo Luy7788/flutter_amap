@@ -202,6 +202,16 @@ class FluttifyMessageCodec extends StandardMessageCodec {
           log('添加对象 $ref 到全局释放池');
           gGlobalReleasePool.add(ref);
         }
+        
+        // // 如果有ScopedReleasePool, 则使用ScopedReleasePool里的释放池
+        // // 否则使用全局的释放池
+        // if (gReleasePoolStack.peek() != null) {
+        //   log('添加对象 $ref 到局部释放池');
+        //   gReleasePoolStack.peek()?.add(ref);
+        // } else {
+        //   log('添加对象 $ref 到全局释放池');
+        //   gGlobalReleasePool.add(ref);
+        // }
         return ref;
       default:
         throw const FormatException('Message corrupted');

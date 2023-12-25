@@ -157,6 +157,8 @@ class AmapController with WidgetsBindingObserver, IMapController {
                 await com_amap_api_maps_model_BitmapDescriptorFactory
                     .fromBitmap(bitmap);
             await locationStyle.myLocationIcon(bitmapDescriptor!);
+
+            await bitmap.recycle();
           }
           /* else {
             final imageData = await AssetImage('images/location_pointer.png',
